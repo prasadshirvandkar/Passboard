@@ -1,0 +1,4 @@
+#Sat Dec 16 16:03:47 IST 2017
+base.0=/Users/prasads/AndroidStudioProjects/Passboard/app/build/intermediates/transforms/dexMerger/debug/8
+path.0=classes.dex
+renamed.0=classes.dex

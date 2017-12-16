@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">613711853851-l0hrig83c9f4i8cvu0u8tj3ouv8lvei7.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://passboard-2525.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">613711853851</string>
+    <string name="google_api_key" translatable="false">AIzaSyAgiL1Xb1lc298db8Gp7uzajQmMKQwKg5M</string>
+    <string name="google_app_id" translatable="false">1:613711853851:android:3d4f0d273e7c1c41</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAgiL1Xb1lc298db8Gp7uzajQmMKQwKg5M</string>
+    <string name="google_storage_bucket" translatable="false">passboard-2525.appspot.com</string>
+    <string name="project_id" translatable="false">passboard-2525</string>
+</resources>

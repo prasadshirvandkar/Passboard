@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "613711853851",
+    "firebase_url": "https://passboard-2525.firebaseio.com",
+    "project_id": "passboard-2525",
+    "storage_bucket": "passboard-2525.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613711853851:android:3d4f0d273e7c1c41",
+        "android_client_info": {
+          "package_name": "com.midsizemango.passboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613711853851-l0hrig83c9f4i8cvu0u8tj3ouv8lvei7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgiL1Xb1lc298db8Gp7uzajQmMKQwKg5M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
