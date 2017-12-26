@@ -1,8 +1,21 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Passboard</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_notes">Notes</string>
     <string name="title_password">Passwords</string>
+    <string name="password">Password</string>
+    <string name="copy">Copy</string>
+    <string name="email_id_or_username">Email Id or Username</string>
+    <string name="name">Name</string>
+    <string name="website_link">Website Link</string>
+    <string name="note">Note</string>
+    <string name="color_palette">Color Palette</string>
+    <string name="colors">Color</string>
+    <string name="touch_sensor">Touch sensor</string>
+    <string name="fingerprintTryIn">Can retry in\n<xliff:g id="min">%02d</xliff:g>:<xliff:g id="sec">%02d</xliff:g></string>
+    <string name="notSupport">This device does not support fingerprint technology</string>
+    <string name="appCodeActivity_tv_fingerprintTryCount"><xliff:g id="error">%s</xliff:g>\n<xliff:g id="try">%d</xliff:g> tries left</string>
+    <string name="todo">TODO</string>
 </resources>

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/prasads/AndroidStudioProjects/Passboard/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "H:\\passboard\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/prasads/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.6.2.aar/2e0d3212f52ff8cf1391fa6b0318508b/res/values-watch-v20/values.xml",
+                    "source": "C:\\Users\\ABC\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.8.0.aar\\1dd064220172b808e1435a7cab977d5a\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

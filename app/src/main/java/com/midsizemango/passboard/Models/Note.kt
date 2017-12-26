@@ -6,37 +6,40 @@ import java.util.*
 /**
  * Created by prasads on 15/12/17.
  */
-class Note(note_id: String, note_name: String, note_text: String, note_color: Int, note_user_id: String, note_date_time: Date): Serializable {
+class Note: Serializable {
 
-    var note_id: String? = note_id
-    var note_name: String? = note_name
-    var note_text: String? = note_text
-    var note_color: Int? = note_color
-    var note_user_id: String? = note_user_id
-    var note_date_time: Date? = note_date_time
+    var note_id: String? = null
+    var note_name: String? = null
+    var note_text: String? = null
+    var note_color: Int? = null
+    var note_user_id: String? = null
+    var note_date_time: Date? = null
 
-    fun getNoteId(): String?{
-        return note_id
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Note
+
+        if (note_id != other.note_id) return false
+        if (note_name != other.note_name) return false
+        if (note_text != other.note_text) return false
+        if (note_color != other.note_color) return false
+        if (note_user_id != other.note_user_id) return false
+        if (note_date_time != other.note_date_time) return false
+
+        return true
     }
 
-    fun getNoteColor(): Int?{
-        return note_color
+    override fun hashCode(): Int {
+        var result = note_id?.hashCode() ?: 0
+        result = 31 * result + (note_name?.hashCode() ?: 0)
+        result = 31 * result + (note_text?.hashCode() ?: 0)
+        result = 31 * result + (note_color ?: 0)
+        result = 31 * result + (note_user_id?.hashCode() ?: 0)
+        result = 31 * result + (note_date_time?.hashCode() ?: 0)
+        return result
     }
 
-    fun getNoteName(): String?{
-        return note_name
-    }
-
-    fun getNoteText(): String?{
-        return note_text
-    }
-
-    fun getNoteUserId(): String?{
-        return note_user_id
-    }
-
-    fun getNoteDateTime(): Date?{
-        return note_date_time;
-    }
 
 }

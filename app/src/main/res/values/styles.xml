@@ -6,6 +6,16 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+        <item name="fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name ="DialogThemeLight" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/colorPrimary</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">#222222</item>
     </style>
 
 </resources>

@@ -13,7 +13,7 @@ class Password: Serializable {
     var pass_pass: String? = null
     var pass_link: String? = null
     var pass_text: String? = null
-    var pass_color: Int? = null
+    var pass_color: Int = 0
     var pass_user_id: String? = null
     var pass_email: String? = null
     var pass_category: String? = null
@@ -35,7 +35,7 @@ class Password: Serializable {
         this.pass_id = pass_id
     }
 
-    fun getPassColor(): Int?{
+    fun getPassColor(): Int{
         return pass_color
     }
 
@@ -117,7 +117,7 @@ class Password: Serializable {
         result = 31 * result + (pass_pass?.hashCode() ?: 0)
         result = 31 * result + (pass_link?.hashCode() ?: 0)
         result = 31 * result + (pass_text?.hashCode() ?: 0)
-        result = 31 * result + (pass_color ?: 0)
+        result = 31 * result + pass_color
         result = 31 * result + (pass_user_id?.hashCode() ?: 0)
         result = 31 * result + (pass_email?.hashCode() ?: 0)
         result = 31 * result + (pass_category?.hashCode() ?: 0)
