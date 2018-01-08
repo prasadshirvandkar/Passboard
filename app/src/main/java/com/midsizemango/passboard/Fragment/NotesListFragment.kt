@@ -5,24 +5,18 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.helper.ItemTouchHelper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
+
 import com.google.firebase.database.*
 import com.midsizemango.noteboard.Models.Note
-import com.midsizemango.passboard.Activity.NoteEditActivity
 import com.midsizemango.passboard.Adapter.NoteListAdapter
-import com.midsizemango.passboard.Models.Password
 import com.midsizemango.passboard.R
-import com.midsizemango.passboard.Utils.DeletionListener
-import com.midsizemango.passboard.Utils.ItemTouchHelperCallback
 import java.util.*
 
 /**
@@ -72,7 +66,7 @@ class NotesListFragment : Fragment() {
                         notes.add(note!!)
                     }
                 }
-                if(notes.isEmpty()){
+                if(notes.size == 0){
                     recyclerView!!.visibility = View.GONE
                     emptyText!!.visibility = View.VISIBLE
                 }else{

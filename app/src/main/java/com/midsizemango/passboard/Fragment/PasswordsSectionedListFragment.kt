@@ -73,7 +73,7 @@ class PasswordsSectionedListFragment :Fragment(){
                         passwords.add(password!!)
                     }
                 }
-                if(passwords.isEmpty()){
+                if(passwords.size == 0){
                     recyclerView!!.visibility = View.GONE
                     emptyText!!.visibility = View.VISIBLE
                 }else{

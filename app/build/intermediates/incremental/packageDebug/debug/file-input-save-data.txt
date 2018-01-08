@@ -1,15 +1,27 @@
 #Internal package file, do not edit.
-#Mon Jan 08 13:20:42 IST 2018
-1.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-2.path=classes.dex
-0.baseType=DIRECTORY
-2.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
-2.set=DEX
-1.baseType=DIRECTORY
-count=3
-1.set=DEX
+#Mon Jan 08 15:52:57 IST 2018
+2.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
+5.set=DEX
 0.path=classes.dex
-0.set=DEX
-0.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 2.baseType=DIRECTORY
+3.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+2.set=DEX
 1.path=classes.dex
+4.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
+count=6
+5.baseType=DIRECTORY
+2.path=classes.dex
+5.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+4.set=DEX
+3.path=classes.dex
+3.baseType=DIRECTORY
+1.set=DEX
+4.path=classes.dex
+1.baseType=DIRECTORY
+5.path=classes.dex
+0.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\18
+0.baseType=DIRECTORY
+3.set=DEX
+1.base=H\:\\passboard\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+4.baseType=DIRECTORY
+0.set=DEX

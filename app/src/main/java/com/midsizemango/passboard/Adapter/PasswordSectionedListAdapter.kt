@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.google.firebase.database.FirebaseDatabase
 import com.midsizemango.passboard.Activity.FingerprintAuthenticationActivity
@@ -103,7 +104,7 @@ class PasswordSectionedListAdapter(private var consolidatedList: MutableList<Lis
     internal class GeneralViewHolder(v: View) : RecyclerView.ViewHolder(v){
         internal var title: TextView = itemView.findViewById(R.id.title)
         internal var email: TextView = itemView.findViewById(R.id.email)
-        internal var title_image: FrameLayout = itemView.findViewById(R.id.title_image)
+        internal var title_image: LinearLayout = itemView.findViewById(R.id.title_image)
         internal var title_text: TextView = itemView.findViewById(R.id.title_text)
         internal var cardview: CardView = itemView.findViewById(R.id.rootView)
         val key = "passboard"

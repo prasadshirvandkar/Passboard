@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                //message.text = resources.getString(R.string.title_notes)
                 switchFragment(NotesListFragment.newInstance(), "NoteListFragment")
                 fragmentSwitchStatus = 1
                 return@OnNavigationItemSelectedListener true
