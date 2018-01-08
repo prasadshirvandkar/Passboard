@@ -150,9 +150,9 @@ MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\ABC\.grad
 	android:label
 		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:11:9-41
 	android:roundIcon
-		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:12:9-58
+		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:12:9-54
 	android:icon
-		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:10:9-47
+		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
 		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
