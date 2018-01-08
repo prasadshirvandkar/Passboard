@@ -236,6 +236,8 @@
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
+    <declare-styleable name="AbsRecyclerViewFastScroller"><attr format="reference" name="rfs_fast_scroller_layout"/><attr format="color|reference" name="rfs_barColor"/><attr format="reference" name="rfs_barBackground"/><attr format="color|reference" name="rfs_handleColor"/><attr format="reference" name="rfs_handleBackground"/></declare-styleable>
+    <declare-styleable name="AbsSectionIndicator"><attr format="reference" name="rfs_section_indicator_layout"/></declare-styleable>
     <declare-styleable name="ActionBar"><attr name="navigationMode">
             
             <enum name="normal" value="0"/>
@@ -579,6 +581,7 @@
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Layout"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
+    <declare-styleable name="SectionTitleIndicator"><attr format="color|reference" name="rfs_textColor"/><attr format="color|reference" name="rfs_backgroundColor"/></declare-styleable>
     <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
 <enum name="standard" value="0"/>
 
@@ -802,6 +805,12 @@
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
+    <dimen name="list_item_height">72dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
     <dimen name="md_action_corner_radius">2dp</dimen>
     <dimen name="md_bg_corner_radius">2dp</dimen>
     <dimen name="md_button_frame_vertical_padding">8dp</dimen>

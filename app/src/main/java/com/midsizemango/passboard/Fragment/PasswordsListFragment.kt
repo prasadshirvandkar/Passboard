@@ -117,7 +117,7 @@ class PasswordsListFragment : Fragment(), DeletionListener {
     override fun itemRemoved(position: Int) {
         val password: Password = pass_List_adapter!!.getItem(position)
         pass_List_adapter!!.removeItem(position)
-        databasereference.child(preferences.getString("id", "id")).child(password.getPassUserId()).removeValue()
+        databasereference.child(preferences.getString("id", "id")).child(password.pass_user_id).removeValue()
     }
 
     fun sortList1(noteComparator: Comparator<Password>) {

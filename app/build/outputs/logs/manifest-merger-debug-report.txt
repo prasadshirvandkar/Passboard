@@ -1,15 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\a6af131188695e804d4bfe7eea16cca1\AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\design-27.0.2.aar\edf64beffbd9c65a7f1c0f9fe681cec2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\core-0.9.6.0.aar\e1a83a509e5e1748034b4b840cede466\AndroidManifest.xml:2:1-15:12
 MERGED from [com.mummyding.view:colorpickerdialog:1.0.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\colorpickerdialog-1.0.0.aar\b267a540b1ec34662e115d8311a26a10\AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.pro100svitlo:fingerprintAuthHelper:1.3.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\fingerprintAuthHelper-1.3.0.aar\9d99541729195998ca00948e47657173\AndroidManifest.xml:2:1-22:12
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.1.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\sectionedrecyclerviewadapter-1.1.3.aar\2326edd1c66e609fa454c859d1b7b18c\AndroidManifest.xml:2:1-14:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\library-1.4.2.aar\ab3692a4bc68d3614eced571ff48ae48\AndroidManifest.xml:6:1-16:12
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\771f9a24aa265e67a8e8f8d798cb3abc\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\0520eedf7d6032826435765f53ea01a0\AndroidManifest.xml:2:1-11:12
@@ -18,6 +17,7 @@ MERGED from [com.google.android.gms:play-services-auth:11.8.0] C:\Users\ABC\.gra
 MERGED from [com.google.firebase:firebase-database:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-database-11.8.0.aar\d492c8fb1957c5e6e6d33904f57be266\AndroidManifest.xml:2:1-8:12
 MERGED from [com.google.firebase:firebase-storage:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-storage-11.8.0.aar\086bf91efe1b6c0fc71efbdce41e642c\AndroidManifest.xml:2:1-8:12
 MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\c697317fe2b93a80e791e9f8ad51bee1\AndroidManifest.xml:17:1-22:12
+MERGED from [xyz.danoz:recyclerviewfastscroller:0.1.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\recyclerviewfastscroller-0.1.3.aar\29a6e9c4cb2ca4cc2d404485cbb189b6\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\1b19f87ff0faefccb7bd93c60c8697c4\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\b6127dd276ca92f2ded43bcc64c12888\AndroidManifest.xml:17:1-54:12
 MERGED from [com.android.support:transition:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\transition-27.0.2.aar\b8da7fe1e40e01e139275b62fdf87444\AndroidManifest.xml:17:1-22:12
@@ -54,20 +54,20 @@ MERGED from [com.google.firebase:firebase-storage-common-license:11.8.0] C:\User
 MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\fd39ff570f803ad197935d9b02875da3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\b81b9c2ae0b1cb8f61b57bca615502e7\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\239be54dc0cf449695b3aa4e2029c94c\AndroidManifest.xml:2:1-6:12
-INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:3:5-41
 		INJECTED from H:\passboard\app\src\main\AndroidManifest.xml
 		INJECTED from H:\passboard\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from H:\passboard\app\src\main\AndroidManifest.xml
-		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from H:\passboard\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from H:\passboard\app\src\main\AndroidManifest.xml
-		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from H:\passboard\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:2:11-69
@@ -88,7 +88,7 @@ MERGED from [com.github.pro100svitlo:fingerprintAuthHelper:1.3.0] C:\Users\ABC\.
 	android:name
 		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:6:22-71
 application
-ADDED from H:\passboard\app\src\main\AndroidManifest.xml:8:5-31:19
+ADDED from H:\passboard\app\src\main\AndroidManifest.xml:8:5-32:19
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\a6af131188695e804d4bfe7eea16cca1\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\a6af131188695e804d4bfe7eea16cca1\AndroidManifest.xml:5:5-20
 MERGED from [com.afollestad.material-dialogs:core:0.9.6.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\core-0.9.6.0.aar\e1a83a509e5e1748034b4b840cede466\AndroidManifest.xml:13:5-20
@@ -97,8 +97,6 @@ MERGED from [com.mummyding.view:colorpickerdialog:1.0.0] C:\Users\ABC\.gradle\ca
 MERGED from [com.mummyding.view:colorpickerdialog:1.0.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\colorpickerdialog-1.0.0.aar\b267a540b1ec34662e115d8311a26a10\AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.pro100svitlo:fingerprintAuthHelper:1.3.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\fingerprintAuthHelper-1.3.0.aar\9d99541729195998ca00948e47657173\AndroidManifest.xml:13:5-20:19
 MERGED from [com.github.pro100svitlo:fingerprintAuthHelper:1.3.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\fingerprintAuthHelper-1.3.0.aar\9d99541729195998ca00948e47657173\AndroidManifest.xml:13:5-20:19
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.1.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\sectionedrecyclerviewadapter-1.1.3.aar\2326edd1c66e609fa454c859d1b7b18c\AndroidManifest.xml:11:5-12:19
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.1.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\sectionedrecyclerviewadapter-1.1.3.aar\2326edd1c66e609fa454c859d1b7b18c\AndroidManifest.xml:11:5-12:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\0520eedf7d6032826435765f53ea01a0\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\0520eedf7d6032826435765f53ea01a0\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\e8383af07dee193cd12b46c5f56ce347\AndroidManifest.xml:22:5-30:19
@@ -193,6 +191,10 @@ activity#com.midsizemango.passboard.Activity.NoteEditActivity
 ADDED from H:\passboard\app\src\main\AndroidManifest.xml:30:9-62
 	android:name
 		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:30:19-60
+activity#com.midsizemango.passboard.Fragment.SearchListActivity
+ADDED from H:\passboard\app\src\main\AndroidManifest.xml:31:9-64
+	android:name
+		ADDED from H:\passboard\app\src\main\AndroidManifest.xml:31:19-62
 uses-sdk
 INJECTED from H:\passboard\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from H:\passboard\app\src\main\AndroidManifest.xml
@@ -207,8 +209,6 @@ MERGED from [com.mummyding.view:colorpickerdialog:1.0.0] C:\Users\ABC\.gradle\ca
 MERGED from [com.mummyding.view:colorpickerdialog:1.0.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\colorpickerdialog-1.0.0.aar\b267a540b1ec34662e115d8311a26a10\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.pro100svitlo:fingerprintAuthHelper:1.3.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\fingerprintAuthHelper-1.3.0.aar\9d99541729195998ca00948e47657173\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.pro100svitlo:fingerprintAuthHelper:1.3.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\fingerprintAuthHelper-1.3.0.aar\9d99541729195998ca00948e47657173\AndroidManifest.xml:7:5-9:41
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.1.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\sectionedrecyclerviewadapter-1.1.3.aar\2326edd1c66e609fa454c859d1b7b18c\AndroidManifest.xml:7:5-9:41
-MERGED from [io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.1.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\sectionedrecyclerviewadapter-1.1.3.aar\2326edd1c66e609fa454c859d1b7b18c\AndroidManifest.xml:7:5-9:41
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\library-1.4.2.aar\ab3692a4bc68d3614eced571ff48ae48\AndroidManifest.xml:12:5-14:41
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\library-1.4.2.aar\ab3692a4bc68d3614eced571ff48ae48\AndroidManifest.xml:12:5-14:41
 MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\771f9a24aa265e67a8e8f8d798cb3abc\AndroidManifest.xml:20:5-44
@@ -225,6 +225,8 @@ MERGED from [com.google.firebase:firebase-storage:11.8.0] C:\Users\ABC\.gradle\c
 MERGED from [com.google.firebase:firebase-storage:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-storage-11.8.0.aar\086bf91efe1b6c0fc71efbdce41e642c\AndroidManifest.xml:6:5-44
 MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\c697317fe2b93a80e791e9f8ad51bee1\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\c697317fe2b93a80e791e9f8ad51bee1\AndroidManifest.xml:20:5-44
+MERGED from [xyz.danoz:recyclerviewfastscroller:0.1.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\recyclerviewfastscroller-0.1.3.aar\29a6e9c4cb2ca4cc2d404485cbb189b6\AndroidManifest.xml:7:5-9:41
+MERGED from [xyz.danoz:recyclerviewfastscroller:0.1.3] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\recyclerviewfastscroller-0.1.3.aar\29a6e9c4cb2ca4cc2d404485cbb189b6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\1b19f87ff0faefccb7bd93c60c8697c4\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:27.0.2] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.0.2.aar\1b19f87ff0faefccb7bd93c60c8697c4\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-analytics:11.8.0] C:\Users\ABC\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.8.0.aar\b6127dd276ca92f2ded43bcc64c12888\AndroidManifest.xml:20:5-44

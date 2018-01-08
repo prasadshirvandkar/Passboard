@@ -39,8 +39,8 @@ class PasswordListAdapter(private var passwords: MutableList<Password>?) : Recyc
 
         fun bind(password: Password) {
             this.password = password
-            title.text = password.getPassName()
-            email.text = encryption.decrypt(password.getPassEmail())
+            title.text = password.pass_name
+            email.text = encryption.decrypt(password.pass_email)
             title_image.setBackgroundColor(password.pass_color)
             if(password.pass_name!!.length > 2){
                 title_text.text = password.pass_name!!.substring(0,2)

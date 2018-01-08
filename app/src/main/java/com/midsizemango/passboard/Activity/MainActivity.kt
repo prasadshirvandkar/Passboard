@@ -15,6 +15,7 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.midsizemango.passboard.Fragment.NotesListFragment
 import com.midsizemango.passboard.Fragment.PasswordsSectionedListFragment
+import com.midsizemango.passboard.Fragment.SearchListActivity
 import com.midsizemango.passboard.R
 
 
@@ -96,17 +97,27 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.add -> {
-                if(fragmentSwitchStatus == 0){
-                    val intent = Intent(applicationContext, PasswordEditActivity::class.java)
-                    intent.putExtra("note_action", "add")
-                    startActivity(intent)
+                val intent = if(fragmentSwitchStatus == 0){
+                    Intent(applicationContext, PasswordEditActivity::class.java)
                 }else{
-                    val intent = Intent(applicationContext, NoteEditActivity::class.java)
-                    intent.putExtra("note_action", "add")
-                    startActivity(intent)
+                    Intent(applicationContext, NoteEditActivity::class.java)
                 }
+                intent.putExtra("note_action", "add")
+                startActivity(intent)
                 true
             }
+
+            R.id.search -> {
+                val intent = Intent(applicationContext, SearchListActivity::class.java)
+                if(fragmentSwitchStatus == 0){
+                    intent.putExtra("search_action", "password")
+                }else{
+                    intent.putExtra("search_action", "note")
+                }
+                startActivity(intent)
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -134,7 +134,7 @@ class PasswordEditActivity: AppCompatActivity() {
         password = intent.getSerializableExtra(EXTRA_PASSWORD) as Password?
         passwordModelStatus = intent.getSerializableExtra(EXTRA_PASSWORD) as Password?
         if(password != null){
-            passId = password!!.getPassUserId()
+            passId = password!!.pass_user_id
             if(password!!.pass_name!!.length > 2){
                 titleName!!.text = password!!.pass_name!!.substring(0,4)
             }else {
@@ -265,19 +265,20 @@ class PasswordEditActivity: AppCompatActivity() {
             val str = databasereference.push().key
             if (password == null) {
                 password = Password()
-                password!!.setPassId(str)
+                password!!.pass_id = str
             }
             //Toast.makeText(applicationContext, str.toString(), Toast.LENGTH_SHORT).show()
-            password!!.setPassEmail(encryption.encrypt(emailEditText!!.text.toString()))
+            password!!.pass_email = encryption.encrypt(emailEditText!!.text.toString())
             if (passwordModelStatus == null) {
-                password!!.setPassUserId(str)
+                password!!.pass_user_id = str
             }
-            password!!.setPassPass(encryption.encrypt(passEditText!!.text.toString()))
-            password!!.setPassName(nameEditText!!.text.toString())
-            password!!.setPassLink(linkEditText!!.text.toString())
-            password!!.setPassText(encryption.encrypt(noteEditText!!.text.toString()))
-            password!!.setPassColor(primaryPreselect)
-            password!!.setPassCategory(selectedCategory.toString())
+            password!!.pass_pass = encryption.encrypt(passEditText!!.text.toString())
+            password!!.pass_name = nameEditText!!.text.toString()
+            password!!.pass_link = linkEditText!!.text.toString()
+            password!!.pass_text = encryption.encrypt(noteEditText!!.text.toString())
+            password!!.pass_color = primaryPreselect
+            password!!.pass_category = selectedCategory.toString()
+
             if (passwordModelStatus == null) {
                 databasereference.child(str).setValue(password)
             } else {

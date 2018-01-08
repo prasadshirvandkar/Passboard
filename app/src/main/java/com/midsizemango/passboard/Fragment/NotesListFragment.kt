@@ -28,7 +28,7 @@ import java.util.*
 /**
  * Created by ABC on 12/23/2017.
  */
-class NotesListFragment : Fragment(), DeletionListener {
+class NotesListFragment : Fragment() {
 
     var note_list_adapter: NoteListAdapter? = null
     lateinit var databasereference: DatabaseReference
@@ -57,8 +57,6 @@ class NotesListFragment : Fragment(), DeletionListener {
         recyclerView!!.layoutManager = LinearLayoutManager(activity)
         note_list_adapter = NoteListAdapter(notes)
 
-        val itemTouchHelper: ItemTouchHelper? = ItemTouchHelper(ItemTouchHelperCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT, this))
-        itemTouchHelper!!.attachToRecyclerView(recyclerView)
         recyclerView!!.adapter = note_list_adapter
 
         return view
@@ -105,12 +103,6 @@ class NotesListFragment : Fragment(), DeletionListener {
                 override fun onCancelled(databaseError: DatabaseError) {}
             })
         }
-    }
-
-    override fun itemRemoved(position: Int) {
-        val note: Note = note_list_adapter!!.getItem(position)
-        note_list_adapter!!.removeItem(position)
-        databasereference.child(preferences.getString("id", "id")).child(note.note_user_id).removeValue()
     }
 
     fun sortList1(noteComparator: Comparator<Note>) {

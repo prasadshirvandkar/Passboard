@@ -44,6 +44,7 @@
         <activity android:name="com.midsizemango.passboard.Activity.PasswordEditActivity" />
         <activity android:name="com.midsizemango.passboard.Activity.FingerprintAuthenticationActivity" />
         <activity android:name="com.midsizemango.passboard.Activity.NoteEditActivity" />
+        <activity android:name="com.midsizemango.passboard.Fragment.SearchListActivity" />
 
         <service
             android:name="com.pro100svitlo.fingerprintAuthHelper.FahTimeOutService"

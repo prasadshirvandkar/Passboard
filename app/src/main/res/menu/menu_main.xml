@@ -9,6 +9,12 @@
         app:showAsAction="always"/>
 
     <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:showAsAction="always"/>
+
+    <item
         android:id="@+id/logout"
         android:title="Logout"
         android:icon="@drawable/exit_to_app"

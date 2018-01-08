@@ -1,7 +1,6 @@
 package com.midsizemango.passboard.Adapter
 
 import android.content.Context
-import android.content.Intent
 import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -18,7 +17,6 @@ import com.midsizemango.passboard.Models.NameItem
 import com.midsizemango.passboard.R
 import se.simbio.encryption.Encryption
 import com.afollestad.materialdialogs.MaterialDialog
-import com.midsizemango.passboard.Models.Password
 
 /**
  * Created by ABC on 12/23/2017.
@@ -81,7 +79,7 @@ class PasswordSectionedListAdapter(private var consolidatedList: MutableList<Lis
                             .negativeText("cancel")
                             .onPositive { dialog, which ->
                                 consolidatedList.removeAt(position)
-                                databasereference.child(preferences.getString("id", "id")).child(generalItem.password!!.getPassUserId()).removeValue()
+                                databasereference.child(preferences.getString("id", "id")).child(generalItem.password!!.pass_user_id).removeValue()
                             }
                             .onNegative { dialog, which ->
                                 dialog.dismiss()

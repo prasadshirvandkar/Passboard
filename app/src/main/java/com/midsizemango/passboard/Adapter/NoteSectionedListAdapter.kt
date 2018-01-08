@@ -86,7 +86,7 @@ class NoteSectionedListAdapter(private var consolidatedList: MutableList<ListIte
                             .negativeText("cancel")
                             .onPositive { dialog, which ->
                                 consolidatedList.removeAt(position)
-                                databasereference.child(preferences.getString("id", "id")).child(generalItem.password!!.getPassUserId()).removeValue()
+                                databasereference.child(preferences.getString("id", "id")).child(generalItem.password!!.pass_user_id).removeValue()
                             }
                             .onNegative { dialog, which ->
                                 dialog.dismiss()

@@ -16,8 +16,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.google.firebase.database.*
-import com.midsizemango.passboard.Activity.PasswordEditActivity
-import com.midsizemango.passboard.Adapter.PasswordListAdapter
 import com.midsizemango.passboard.Models.Password
 import com.midsizemango.passboard.R
 import com.midsizemango.passboard.Adapter.PasswordSectionedListAdapter
@@ -95,7 +93,6 @@ class PasswordsSectionedListFragment :Fragment(){
                         consolidatedList.add(generalItem)
                     }
                 }
-
                 passwordSectionedAdapter!!.notifyDataSetChanged()
             }
 
@@ -103,8 +100,8 @@ class PasswordsSectionedListFragment :Fragment(){
         })
     }
 
-    fun groupDataIntoHashMap(passwordList: MutableList<Password>): HashMap<String, MutableList<Password>>{
-        val groupedHashMap = HashMap<String, MutableList<Password>>()
+    fun groupDataIntoHashMap(passwordList: MutableList<Password>): TreeMap<String, MutableList<Password>>{
+        val groupedHashMap = TreeMap<String, MutableList<Password>>()
 
         for(password in passwordList){
             val hmKey: String = password.pass_name!!.substring(0,1)
@@ -118,4 +115,5 @@ class PasswordsSectionedListFragment :Fragment(){
         }
         return groupedHashMap
     }
+
 }

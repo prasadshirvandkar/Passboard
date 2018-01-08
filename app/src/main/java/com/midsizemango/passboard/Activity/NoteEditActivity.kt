@@ -69,6 +69,7 @@ class NoteEditActivity: AppCompatActivity() {
 
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        toolbar!!.title = ""
 
         noteAction = intent.getStringExtra("note_action")
         if(noteAction.equals("edit")){

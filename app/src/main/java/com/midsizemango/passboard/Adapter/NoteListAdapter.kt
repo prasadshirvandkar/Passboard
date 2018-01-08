@@ -12,6 +12,7 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.google.firebase.database.FirebaseDatabase
 import com.midsizemango.noteboard.Models.Note
 import com.midsizemango.passboard.Activity.FingerprintAuthenticationActivity
+import com.midsizemango.passboard.Fragment.NotesListFragment
 import com.midsizemango.passboard.R
 import se.simbio.encryption.Encryption
 
@@ -116,7 +117,7 @@ class NoteListAdapter(private var notes: MutableList<Note>?) : RecyclerView.Adap
                     .positiveText("delete")
                     .negativeText("cancel")
                     .onPositive { dialog, which ->
-                        notes!!.removeAt(position)
+                        removeItem(position)
                         databasereference.child(preferences.getString("id", "id")).child(note.note_user_id).removeValue()
                     }
                     .onNegative { dialog, which ->

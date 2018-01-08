@@ -147,12 +147,12 @@
     <orderEntry type="library" name="com.android.support:animated-vector-drawable-27.0.2" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-auth-11.8.0" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-iid-11.8.0" level="project" />
+    <orderEntry type="library" name="xyz.danoz:recyclerviewfastscroller-0.1.3" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-base-license-11.8.0" level="project" />
     <orderEntry type="library" name="com.github.simbiose:Encryption:2.0.1@jar" level="project" />
     <orderEntry type="library" name="org.jetbrains.kotlin:kotlin-stdlib:1.2.10@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-auth-license-11.8.0" level="project" />
-    <orderEntry type="library" name="io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter-1.1.3" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-basement-license-11.8.0" level="project" />
     <orderEntry type="library" name="com.android.support.constraint:constraint-layout-solver:1.0.2@jar" level="project" />
     <orderEntry type="library" name="com.afollestad.material-dialogs:core-0.9.6.0" level="project" />
