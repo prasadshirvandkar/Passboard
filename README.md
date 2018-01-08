@@ -8,3 +8,6 @@ It uses Google SignIn Authentication and allows to save EmailIDs, Passwords, Not
 It uses Firebase Realtime Database & Authentication Service for saving Data.
 
 If you want to clone project and use it, you will have to generate your own google-services.json file from Firebase Console and add it to the App.
+
+<img src="https://github.com/MidsizeMango/Passboard/blob/master/AFFIX_20180108_171145.png" /> 
+
