@@ -33,27 +33,30 @@ class ColorGenerator (private val mColors: List<Int>) {
                     -0x7fa87f
             ))
             MATERIAL = create(Arrays.asList(
-                    -0x1a8c8d,
-                    -0xf9d6e,
-                    -0x459738,
-                    -0x6a8a33,
-                    -0x867935,
-                    -0x9b4a0a,
-                    -0xb03c09,
-                    -0xb22f1f,
-                    -0xb24954,
-                    -0x7e387c,
-                    -0x512a7f,
-                    -0x759b,
-                    -0x2b1ea9,
-                    -0x2ab1,
-                    -0x48b3,
-                    -0x5e7781,
-                    -0x6f5b52
+                    -0xff432c,
+                    -0xff6978,
+                    -0x86aab8,
+                    -0xbaa59c,
+                    -0x1a848e,
+                    -0x72dcbb,
+                    -0x9f8275,
+                    -0x8fbd,
+                    -0xbf7f,
+                    -0x16e19d,
+                    -0xfc8cc1,
+                    -0xa41db,
+                    -0xca600e,
+                    -0xa98804,
+                    -0x2bb19311,
+                    -0xd9cdc8,
+                    -0xff6978,
+                    -0xfd651c,
+                    -0xff61d7,
+                    -0xcc4987
             ))
         }
 
-        fun create(colorList: List<Int>): ColorGenerator {
+        private fun create(colorList: List<Int>): ColorGenerator {
             return ColorGenerator(colorList)
         }
     }

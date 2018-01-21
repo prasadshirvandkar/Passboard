@@ -15,7 +15,6 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.midsizemango.passboard.Fragment.NotesListFragment
 import com.midsizemango.passboard.Fragment.PasswordsSectionedListFragment
-import com.midsizemango.passboard.Fragment.SearchListActivity
 import com.midsizemango.passboard.R
 
 

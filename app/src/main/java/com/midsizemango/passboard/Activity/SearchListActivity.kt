@@ -1,4 +1,4 @@
-package com.midsizemango.passboard.Fragment
+package com.midsizemango.passboard.Activity
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -21,6 +21,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.midsizemango.noteboard.Models.Note
 import com.midsizemango.passboard.Adapter.NoteListAdapter
+import se.simbio.encryption.Encryption
 
 /**
  * Created by ABC on 1/8/2018.
@@ -37,6 +38,11 @@ class SearchListActivity: AppCompatActivity(){
     var emptyText: TextView? = null
     var recyclerView: RecyclerView? = null
     var toolbar: Toolbar? = null
+
+    val key = "passboard"
+    val salt = "passboard2525"
+    var iv = ByteArray(16)
+    var encryption: Encryption = Encryption.getDefault(key, salt, iv)
 
     var action: String = ""
     var tempList = mutableListOf<Password>()
@@ -67,7 +73,7 @@ class SearchListActivity: AppCompatActivity(){
                         if (!searchList.contains(data)) {
                             searchList.add(data!!)
                         }
-                    }else{
+                    } else{
                         val data = dataSnapshot.getValue<Note>(Note::class.java)
                         if (!searchListNote.contains(data)) {
                             searchListNote.add(data!!)
@@ -143,9 +149,9 @@ class SearchListActivity: AppCompatActivity(){
                 recyclerView!!.adapter = pass_List_adapter
                 pass_List_adapter!!.notifyDataSetChanged()
             }else{
-                for (i in 0 until searchList.size) {
-                    if (searchList[i].pass_name!!.toLowerCase().contains(sch)) {
-                        tempListNotes.add(searchListNote[i])
+                for (j in 0 until searchListNote.size) {
+                    if (encryption.decrypt(searchListNote[j].note_name!!).toLowerCase().contains(sch)) {
+                        tempListNotes.add(searchListNote[j])
                     }
                 }
                 note_list_adapter = NoteListAdapter(tempListNotes)
@@ -156,9 +162,13 @@ class SearchListActivity: AppCompatActivity(){
         updateView()
     }
 
-
     private fun updateView() {
-        if(tempList.isEmpty()){
+        val listI = if(action == "password"){
+            tempList
+        } else {
+            tempListNotes
+        }
+        if(listI.isEmpty()){
             recyclerView!!.visibility = View.GONE
             emptyText!!.visibility = View.VISIBLE
         }else{

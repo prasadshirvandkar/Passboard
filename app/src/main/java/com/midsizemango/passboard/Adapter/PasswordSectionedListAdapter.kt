@@ -59,10 +59,10 @@ class PasswordSectionedListAdapter(private var consolidatedList: MutableList<Lis
                 itemHolder.title.text = generalItem.password!!.pass_name
                 itemHolder.email.text = itemHolder.encryption.decrypt(generalItem.password!!.pass_email)
                 itemHolder.title_image.setBackgroundColor(generalItem.password!!.pass_color)
-                if(generalItem.password!!.pass_name!!.length > 3){
+                if(generalItem.password!!.pass_name!!.length >= 4){
                     itemHolder.title_text.text = generalItem.password!!.pass_name!!.substring(0,3)
                 }else {
-                    itemHolder.title_text.text = generalItem.password!!.pass_name!!.substring(0,1)
+                    itemHolder.title_text.text = generalItem.password!!.pass_name!!
                 }
 
                 itemHolder.cardview.setOnClickListener {

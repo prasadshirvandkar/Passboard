@@ -10,6 +10,9 @@ import android.graphics.PorterDuffColorFilter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
@@ -17,6 +20,7 @@ import com.github.mummyding.colorpickerdialog.ColorPickerDialog
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.midsizemango.noteboard.Models.Note
+import com.midsizemango.passboard.Fragment.NotesListFragment
 import com.midsizemango.passboard.R
 import com.midsizemango.passboard.Utils.ColorGenerator
 import se.simbio.encryption.Encryption
@@ -45,6 +49,8 @@ class NoteEditActivity: AppCompatActivity() {
     var editTitle: EditText? = null
     var editContent: EditText? = null
     var noteAction: String? = null
+    var titleLength = 0
+    var contentLength = 0
 
     fun newInstance(context: Context, note: Note?): Intent {
         val intent = Intent(context, NoteEditActivity::class.java)
@@ -70,6 +76,7 @@ class NoteEditActivity: AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         toolbar!!.title = ""
+        title = ""
 
         noteAction = intent.getStringExtra("note_action")
         if(noteAction.equals("edit")){
@@ -125,22 +132,26 @@ class NoteEditActivity: AppCompatActivity() {
 
             R.id.color -> {
                 val colorsList = intArrayOf(-0x1a8c8d,
-                        -0xf9d6e,
-                        -0x459738,
-                        -0x6a8a33,
-                        -0x867935,
-                        -0x9b4a0a,
-                        -0xb03c09,
-                        -0xb22f1f,
-                        -0xb24954,
-                        -0x7e387c,
-                        -0x512a7f,
-                        -0x759b,
-                        -0x2b1ea9,
-                        -0x2ab1,
-                        -0x48b3,
-                        -0x5e7781,
-                        -0x6f5b52)
+                        -0xff432c,
+                        -0xff6978,
+                        -0x86aab8,
+                        -0xbaa59c,
+                        -0x1a848e,
+                        -0x72dcbb,
+                        -0x9f8275,
+                        -0x8fbd,
+                        -0xbf7f,
+                        -0x16e19d,
+                        -0xfc8cc1,
+                        -0xa41db,
+                        -0xca600e,
+                        -0xa98804,
+                        -0x2bb19311,
+                        -0xd9cdc8,
+                        -0xff6978,
+                        -0xfd651c,
+                        -0xff61d7,
+                        -0xcc4987)
 
                 ColorPickerDialog(this, colorsList)
                         .setDismissAfterClick(false)
@@ -164,7 +175,7 @@ class NoteEditActivity: AppCompatActivity() {
 
     override fun onBackPressed(){
         super.onBackPressed()
-        if(!editTitle!!.text.isEmpty()) {
+        if (!editTitle!!.text.isEmpty()) {
             val str = databasereference.push().key
             if (note == null) {
                 note = Note()
@@ -182,15 +193,11 @@ class NoteEditActivity: AppCompatActivity() {
             } else {
                 databasereference.child(noteId).setValue(note)
             }
-            val intent = Intent()
-            setResult(Activity.RESULT_OK, intent)
-            finish()
-        } else if(editTitle!!.text.isEmpty()){
+
+        } else if (editTitle!!.text.isEmpty()) {
             val intent = Intent()
             setResult(Activity.RESULT_CANCELED, intent)
             finish()
         }
     }
-
-
 }

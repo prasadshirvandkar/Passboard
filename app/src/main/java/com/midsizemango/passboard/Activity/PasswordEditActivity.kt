@@ -10,9 +10,12 @@ import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
+import android.graphics.Typeface
 import android.support.design.widget.AppBarLayout
 import android.support.design.widget.CollapsingToolbarLayout
 import android.support.v7.widget.Toolbar
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
@@ -67,6 +70,7 @@ class PasswordEditActivity: AppCompatActivity() {
     val salt = "passboard2525"
     var iv = ByteArray(16)
     var encryption: Encryption = Encryption.getDefault(key, salt, iv)
+    var editStatus = 0
 
     fun newInstance(context: Context, password: Password?): Intent {
         val intent = Intent(context, PasswordEditActivity::class.java)
@@ -117,10 +121,51 @@ class PasswordEditActivity: AppCompatActivity() {
                         override fun onSelection(dialog: MaterialDialog, view: View, which: Int, text: CharSequence) {
                             selectedCategory = text.toString()
                             categoryText!!.text = text.toString()
+                            editStatus = 1
                         }
                     })
                     .show()
         }
+
+        nameEditText!!.addTextChangedListener(object: TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {}
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                editStatus = 1
+            }
+        })
+
+        emailEditText!!.addTextChangedListener(object: TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {}
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                editStatus = 1
+            }
+        })
+
+        passEditText!!.addTextChangedListener(object: TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {}
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                editStatus = 1
+            }
+        })
+
+        linkEditText!!.addTextChangedListener(object: TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {}
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                editStatus = 1
+            }
+        })
+
+        noteEditText!!.addTextChangedListener(object: TextWatcher{
+            override fun afterTextChanged(p0: Editable?) {}
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                editStatus = 1
+            }
+        })
 
         passwordAction = intent.getStringExtra("password_action")
         if(passwordAction.equals("edit")){
@@ -135,10 +180,10 @@ class PasswordEditActivity: AppCompatActivity() {
         passwordModelStatus = intent.getSerializableExtra(EXTRA_PASSWORD) as Password?
         if(password != null){
             passId = password!!.pass_user_id
-            if(password!!.pass_name!!.length > 2){
+            if(password!!.pass_name!!.length >= 4){
                 titleName!!.text = password!!.pass_name!!.substring(0,4)
             }else {
-                titleName!!.text = password!!.pass_name!!.substring(0,1)
+                titleName!!.text = password!!.pass_name!!
             }
             categoryText!!.text = password!!.pass_category
             emailEditText!!.setText(encryption.decrypt(password!!.pass_email.toString()))
@@ -150,6 +195,7 @@ class PasswordEditActivity: AppCompatActivity() {
             selectedCategory = password!!.pass_category
             if(password!!.pass_category != "Selected Category"){
                 categoryText!!.setTextColor(password!!.pass_color)
+                categoryText!!.setTypeface(categoryText!!.typeface, Typeface.BOLD)
             }
 
             primaryPreselect = password!!.pass_color
@@ -223,22 +269,26 @@ class PasswordEditActivity: AppCompatActivity() {
 
             R.id.color -> {
                 val colorsList = intArrayOf(-0x1a8c8d,
-                        -0xf9d6e,
-                        -0x459738,
-                        -0x6a8a33,
-                        -0x867935,
-                        -0x9b4a0a,
-                        -0xb03c09,
-                        -0xb22f1f,
-                        -0xb24954,
-                        -0x7e387c,
-                        -0x512a7f,
-                        -0x759b,
-                        -0x2b1ea9,
-                        -0x2ab1,
-                        -0x48b3,
-                        -0x5e7781,
-                        -0x6f5b52)
+                        -0xff432c,
+                        -0xff6978,
+                        -0x86aab8,
+                        -0xbaa59c,
+                        -0x1a848e,
+                        -0x72dcbb,
+                        -0x9f8275,
+                        -0x8fbd,
+                        -0xbf7f,
+                        -0x16e19d,
+                        -0xfc8cc1,
+                        -0xa41db,
+                        -0xca600e,
+                        -0xa98804,
+                        -0x2bb19311,
+                        -0xd9cdc8,
+                        -0xff6978,
+                        -0xfd651c,
+                        -0xff61d7,
+                        -0xcc4987)
 
                 ColorPickerDialog(this, colorsList)
                         .setDismissAfterClick(false)
@@ -261,33 +311,39 @@ class PasswordEditActivity: AppCompatActivity() {
 
     override fun onBackPressed(){
         super.onBackPressed()
-        if(!emailEditText!!.text.isEmpty() && !passEditText!!.text.isEmpty() && !nameEditText!!.text.isEmpty()) {
-            val str = databasereference.push().key
-            if (password == null) {
-                password = Password()
-                password!!.pass_id = str
-            }
-            //Toast.makeText(applicationContext, str.toString(), Toast.LENGTH_SHORT).show()
-            password!!.pass_email = encryption.encrypt(emailEditText!!.text.toString())
-            if (passwordModelStatus == null) {
-                password!!.pass_user_id = str
-            }
-            password!!.pass_pass = encryption.encrypt(passEditText!!.text.toString())
-            password!!.pass_name = nameEditText!!.text.toString()
-            password!!.pass_link = linkEditText!!.text.toString()
-            password!!.pass_text = encryption.encrypt(noteEditText!!.text.toString())
-            password!!.pass_color = primaryPreselect
-            password!!.pass_category = selectedCategory.toString()
+        if(editStatus == 1) {
+            if (!emailEditText!!.text.isEmpty() && !passEditText!!.text.isEmpty() && !nameEditText!!.text.isEmpty()) {
+                val str = databasereference.push().key
+                if (password == null) {
+                    password = Password()
+                    password!!.pass_id = str
+                }
+                //Toast.makeText(applicationContext, str.toString(), Toast.LENGTH_SHORT).show()
+                password!!.pass_email = encryption.encrypt(emailEditText!!.text.toString())
+                if (passwordModelStatus == null) {
+                    password!!.pass_user_id = str
+                }
+                password!!.pass_pass = encryption.encrypt(passEditText!!.text.toString())
+                password!!.pass_name = nameEditText!!.text.toString()
+                password!!.pass_link = linkEditText!!.text.toString()
+                password!!.pass_text = encryption.encrypt(noteEditText!!.text.toString())
+                password!!.pass_color = primaryPreselect
+                password!!.pass_category = selectedCategory.toString()
 
-            if (passwordModelStatus == null) {
-                databasereference.child(str).setValue(password)
-            } else {
-                databasereference.child(passId).setValue(password)
+                if (passwordModelStatus == null) {
+                    databasereference.child(str).setValue(password)
+                } else {
+                    databasereference.child(passId).setValue(password)
+                }
+                val intent = Intent()
+                setResult(RESULT_OK, intent)
+                finish()
+            } else if (emailEditText!!.text.isEmpty() && passEditText!!.text.isEmpty()) {
+                val intent = Intent()
+                setResult(Activity.RESULT_CANCELED, intent)
+                finish()
             }
-            val intent = Intent()
-            setResult(RESULT_OK, intent)
-            finish()
-        } else if(emailEditText!!.text.isEmpty() && passEditText!!.text.isEmpty()){
+        }else{
             val intent = Intent()
             setResult(Activity.RESULT_CANCELED, intent)
             finish()

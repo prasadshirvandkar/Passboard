@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,7 @@ class NotesListFragment : Fragment() {
     var notes = mutableListOf<Note>()
     var emptyText: TextView? = null
     var recyclerView: RecyclerView? = null
+    var strtext:String? = null
 
     companion object {
         fun newInstance(): NotesListFragment {
@@ -48,9 +50,9 @@ class NotesListFragment : Fragment() {
         emptyText = view.findViewById(R.id.emptyText) as TextView
         recyclerView = view.findViewById(R.id.recyclerview_fragment) as RecyclerView
         recyclerView!!.hasFixedSize()
+
         recyclerView!!.layoutManager = LinearLayoutManager(activity)
         note_list_adapter = NoteListAdapter(notes)
-
         recyclerView!!.adapter = note_list_adapter
 
         return view
@@ -77,26 +79,6 @@ class NotesListFragment : Fragment() {
             }
             override fun onCancelled(databaseError: DatabaseError) {}
         })
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if(resultCode == Activity.RESULT_OK){
-            databasereference.child(preferences.getString("id", "id")).addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    for (noteDataSnapshot in dataSnapshot.children) {
-                        val note = noteDataSnapshot.getValue<Note>(Note::class.java)
-                        if(!notes.contains(note)) {
-                            notes.add(note!!)
-                        }
-                    }
-                    //note_list_adapter?.updateList(notes)
-                    sortList1(NoteListAdapter(notes).titleComparatorAesc)
-                }
-                override fun onCancelled(databaseError: DatabaseError) {}
-            })
-        }
     }
 
     fun sortList1(noteComparator: Comparator<Note>) {

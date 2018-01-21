@@ -35,45 +35,6 @@ class NoteListAdapter(private var notes: MutableList<Note>?) : RecyclerView.Adap
 
         private var note: Note? = null
         internal var context: Context = itemView.context
-        /*
-        fun bind(note: Note) {
-            this.note = note
-            title.text = encryption.decrypt(note.note_name)
-            val s = encryption.decrypt(note.note_text).length
-            val sb = StringBuilder()
-            for(i in 0..s){
-                sb.append("*")
-            }
-            content.text = sb.toString()
-            title_image.setBackgroundColor(note.note_color!!)
-            if(note.note_name!!.length > 2){
-                title_text.text = note.note_name!!.substring(0,2)
-            }else {
-                title_text.text = note.note_name!!.substring(0,1)
-            }
-        }
-
-        override fun onClick(view: View) {
-            val context = view.context
-            context.startActivity(FingerprintAuthenticationActivity().newInstance(context, note))
-        }
-
-        override fun onLongClick(view: View?): Boolean {
-            val preferences = view!!.context.getSharedPreferences("PREFS", Context.MODE_PRIVATE)
-            val databasereference = FirebaseDatabase.getInstance().getReference("passwords")
-            MaterialDialog.Builder(view.context)
-                    .title("Delete")
-                    .content("Do you want to Delete the Password?")
-                    .positiveText("delete")
-                    .negativeText("cancel")
-                    .onPositive { dialog, which ->
-                        databasereference.child(preferences.getString("id", "id")).child(note!!.note_user_id).removeValue()
-                    }
-                    .onNegative { dialog, which ->
-                        dialog.dismiss()
-                    }.show()
-            return true
-        }*/
     }
 
     var titleComparatorAesc: Comparator<Note> = Comparator { lhs, rhs ->
@@ -98,19 +59,19 @@ class NoteListAdapter(private var notes: MutableList<Note>?) : RecyclerView.Adap
         }
         holder.content.text = sb.toString()
         holder.title_image.setBackgroundColor(note.note_color!!)
-        if(note.note_name!!.length > 3){
+        if(note.note_name!!.length >= 4){
             holder.title_text.text = holder.encryption.decrypt(note.note_name!!).substring(0,3)
         }else {
-            holder.title_text.text = holder.encryption.decrypt(note.note_name!!).substring(0,1)
+            holder.title_text.text = holder.encryption.decrypt(note.note_name!!)
         }
 
         holder.cardview.setOnClickListener {
             holder.context.startActivity(FingerprintAuthenticationActivity().newInstance(holder.context, note))
         }
 
+        val preferences = holder.context.getSharedPreferences("PREFS", Context.MODE_PRIVATE)
+        val databasereference = FirebaseDatabase.getInstance().getReference("notes")
         holder.cardview.setOnLongClickListener {
-            val preferences = holder.context.getSharedPreferences("PREFS", Context.MODE_PRIVATE)
-            val databasereference = FirebaseDatabase.getInstance().getReference("passwords")
             MaterialDialog.Builder(holder.context)
                     .title("Delete")
                     .content("Do you want to Delete the Password?")

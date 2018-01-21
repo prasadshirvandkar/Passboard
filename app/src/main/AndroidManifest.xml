@@ -28,7 +28,7 @@
         <activity android:name=".Activity.PasswordEditActivity" />
         <activity android:name=".Activity.FingerprintAuthenticationActivity"/>
         <activity android:name=".Activity.NoteEditActivity"/>
-        <activity android:name=".Fragment.SearchListActivity"/>
+        <activity android:name=".Activity.SearchListActivity"/>
     </application>
 
 </manifest>

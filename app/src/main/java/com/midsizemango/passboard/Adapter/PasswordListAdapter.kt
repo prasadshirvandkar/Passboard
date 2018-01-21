@@ -7,6 +7,7 @@ import android.widget.TextView
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import com.midsizemango.noteboard.Models.Note
 import com.midsizemango.passboard.Activity.FingerprintAuthenticationActivity
 import com.midsizemango.passboard.Models.Password
@@ -23,7 +24,7 @@ class PasswordListAdapter(private var passwords: MutableList<Password>?) : Recyc
 
         private var title: TextView = itemView.findViewById(R.id.title)
         private var email: TextView = itemView.findViewById(R.id.email)
-        private var title_image: FrameLayout = itemView.findViewById(R.id.title_image)
+        private var title_image: LinearLayout = itemView.findViewById(R.id.title_image)
         private var title_text: TextView = itemView.findViewById(R.id.title_text)
         private var cardview: CardView = itemView.findViewById(R.id.rootView)
         val key = "passboard"
